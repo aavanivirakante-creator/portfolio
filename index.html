@@ -18,9 +18,15 @@ font-family: Arial, sans-serif;
 
 /* Body */
 body{
-background: linear-gradient(135deg, #6a11cb, #2575fc);
-color: white;
-font-family: Arial, sans-serif;
+background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #89f7fe, #66a6ff);
+background-size: 400% 400%;
+animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 /* Header */
