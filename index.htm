@@ -3,53 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Portfolio</title>
+<title>My Portfolio</title>
 
 <style>
 
-/* Google Font style look */
+/* Reset */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
+font-family: 'Poppins', sans-serif;
 scroll-behavior:smooth;
 }
 
-/* Animated Gradient Background */
+/* Animated Background */
 body{
-background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000000);
+background: linear-gradient(-45deg,#6a11cb,#2575fc,#ff9a9e,#fad0c4);
 background-size:400% 400%;
-animation: bg 12s ease infinite;
+animation: gradient 10s ease infinite;
 color:white;
 }
 
-@keyframes bg{
+@keyframes gradient{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
 }
 
-/* Navbar */
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-position:sticky;
-top:0;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(10px);
+/* Header */
+header{
+text-align:center;
+padding:80px 20px;
 }
 
-nav h2{
-font-size:22px;
+header h1{
+font-size:50px;
+animation: fadeDown 1s ease;
+}
+
+header p{
+margin-top:10px;
+font-size:20px;
+opacity:0.9;
+}
+
+nav{
+margin-top:20px;
 }
 
 nav a{
+margin:10px;
 color:white;
-margin-left:20px;
 text-decoration:none;
+font-weight:bold;
 position:relative;
 }
 
@@ -57,7 +63,7 @@ nav a::after{
 content:'';
 width:0;
 height:2px;
-background:#00f2fe;
+background:white;
 position:absolute;
 left:0;
 bottom:-5px;
@@ -68,94 +74,54 @@ nav a:hover::after{
 width:100%;
 }
 
-/* Hero Section */
-.hero{
-height:90vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-flex-direction:column;
-}
-
-.hero h1{
-font-size:55px;
-animation: fadeDown 1s ease;
-}
-
-.hero span{
-color:#00f2fe;
-}
-
-.hero p{
-margin-top:10px;
-font-size:20px;
-opacity:0.9;
-}
-
-.btn{
-margin-top:20px;
-padding:12px 25px;
-background:#00f2fe;
-color:#000;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.btn:hover{
-background:white;
-}
-
 /* Sections */
 section{
-padding:60px 10%;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+margin:30px;
+padding:30px;
+border-radius:15px;
+animation: fadeUp 1s ease;
 }
 
-h2{
-margin-bottom:20px;
-font-size:32px;
-}
-
-/* Cards */
-.cards{
+/* Skills */
+.skills{
 display:flex;
-gap:25px;
+gap:20px;
 flex-wrap:wrap;
 }
 
 .card{
 flex:1;
-min-width:250px;
-background:rgba(255,255,255,0.08);
-padding:25px;
-border-radius:15px;
-backdrop-filter:blur(10px);
+min-width:200px;
+padding:20px;
+border-radius:12px;
+background:rgba(255,255,255,0.2);
 transition:0.4s;
+text-align:center;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.03);
-background:rgba(255,255,255,0.15);
+transform:translateY(-10px) scale(1.05);
+background:white;
+color:#333;
 }
 
-/* Contact */
-.contact a{
+/* Buttons */
+.btn{
 display:inline-block;
+padding:10px 20px;
 margin:10px;
-padding:12px 20px;
-background:#00f2fe;
-color:black;
-border-radius:30px;
+border-radius:25px;
+background:white;
+color:#333;
 text-decoration:none;
+transition:0.3s;
 }
 
-/* Footer */
-footer{
-text-align:center;
-padding:30px;
-opacity:0.8;
+.btn:hover{
+background:#333;
+color:white;
 }
 
 /* Animations */
@@ -164,18 +130,19 @@ from{opacity:0;transform:translateY(-30px);}
 to{opacity:1;transform:translateY(0);}
 }
 
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
 /* Responsive */
 @media(max-width:768px){
 
-.hero h1{
+header h1{
 font-size:32px;
 }
 
-.cards{
-flex-direction:column;
-}
-
-nav{
+.skills{
 flex-direction:column;
 }
 
@@ -186,49 +153,30 @@ flex-direction:column;
 
 <body>
 
-<nav>
-<h2>MyPortfolio</h2>
+<header>
+<h1>My Portfolio</h1>
+<p>Creative Web Developer</p>
 
-<div>
+<nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
-</div>
 </nav>
-
-<div class="hero">
-<h1>Hello, I'm <span>AAVANI VIRAKANTE </span></h1>
-<p>Frontend Developer | Creative Designer | Student</p>
-
-<a href="#projects" class="btn">View My Work</a>
-</div>
+</header>
 
 <section id="about">
 <h2>About Me</h2>
-<p>My name is AAVANI VIRAKANTE . I am a passionate web developer who loves creating modern, responsive, and user-friendly websites using HTML, CSS, and JavaScript.</p>
+<p>  Hi, I’m AMRITHA SUNIL,a Computer Science student with a strong interest in building practical and user-friendly digital solutions. I enjoy working on projects that solve real-world problems. I’m constantly learning new technologies and improving my skills to become a better developer every day.</p>
 </section>
 
 <section id="skills">
 <h2>Skills</h2>
 
-<div class="cards">
-
-<div class="card">
-<h3>HTML</h3>
-<p>Semantic and accessible web pages.</p>
-</div>
-
-<div class="card">
-<h3>CSS</h3>
-<p>Responsive layouts and modern UI design.</p>
-</div>
-
-<div class="card">
-<h3>JavaScript</h3>
-<p>Interactive and dynamic web features.</p>
-</div>
-
+<div class="skills">
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+<div class="card">JavaScript</div>
 </div>
 
 </section>
@@ -236,35 +184,29 @@ flex-direction:column;
 <section id="projects">
 <h2>Projects</h2>
 
-<div class="cards">
-
 <div class="card">
 <h3>Portfolio Website</h3>
-<p>A modern personal portfolio website.</p>
+<p>A stylish responsive portfolio.</p>
 </div>
 
 <div class="card">
 <h3>Task Manager</h3>
-<p>A simple web application for daily tasks.</p>
-</div>
-
+<p>A web app for managing tasks.</p>
 </div>
 
 </section>
 
 <section id="contact">
-<h2>Contact Me</h2>
+<h2>Contact</h2>
 
-<div class="contact">
-<a href="mailto:aavanivirakante@gmail.com">Email</a>
-<a href="https://github.com/">GitHub</a>
-<a href="https://www.linkedin.com/in/aavani-virakante-9108a9379">LinkedIn</a>
-</div>
+<a href="mailto:amrithasunil837@gmail.com" class="btn">Email</a>
+<a href="https://github.com/" class="btn">GitHub</a>
+<a href="https://www.linkedin.com/in/amritha-sunil-a62994382" class="btn">LinkedIn</a>
 
 </section>
 
-<footer>
-<p>© 2026 Premium Portfolio | Designed by You</p>
+<footer style="text-align:center;padding:20px;">
+<p>© 2026 My Portfolio</p>
 </footer>
 
 </body>
